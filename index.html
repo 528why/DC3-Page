@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
@@ -53,9 +53,9 @@
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
+        <span class="icon">
           <i class="fas fa-home"></i>
-      </span>
+        </span>
       </a>
 
       <!-- <div class="navbar-item has-dropdown is-hoverable">
@@ -78,7 +78,6 @@
         </div>
       </div> -->
     </div>
-
   </div>
 </nav>
 
@@ -93,18 +92,20 @@
             <span class="author-block">
               <a href="https://528why.github.io/">Huyu Wu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://suduo94.github.io/">Duo Su</a><sup>2</sup>,</span>
+              <a href="https://suduo94.github.io/">Duo Su</a><sup>2*</sup>,</span>
             <span class="author-block">
-              Junjie Hou<sup>2</sup>,
+              Junjie Hou<sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://github.com/Guang000/">Guang Li</a><sup>2</sup>,
+              <a href="https://github.com/Guang000/">Guang Li</a><sup>4*</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>University of Chinese Academy of Sciences ,</span>
+            <span class="author-block"><sup>2</sup>Tsinghua University ,</span>
+            <span class="author-block"><sup>3</sup>Hong Kong University of Science and Technology ,</span>
+            <span class="author-block"><sup>4</sup>Hokkaido University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -166,14 +167,6 @@
   </div>
 </section>
 
-Of course. To replace the video with an image, you'll need to swap the <video> element with an <img> tag.
-
-  Simply replace the entire <video>...</video> block with an <img> tag and set its src attribute to the path of your image file.
-  
-  Modified Code
-  Here is the updated HTML section. I've replaced the video with an <img> tag pointing to a placeholder image path.
-  
-  HTML
   
   <!-- <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -190,9 +183,9 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="./static/images/DC3-Fig1V1_01.png" alt="Teaser image description" />
+        <img src="./static/images/DC3-Fig1V1_01.png" alt="Teaser image description" style="max-width: 40%; height: auto; margin: 0 auto; display: block; margin-bottom: 2rem;" />
         
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-centered" style="margin-top: 2rem;">
           <strong>Dataset Condensation Triangle.</strong> Coreset Selection and Dataset Quantization focus on image-level selection, while Dataset Distillation optimizes pixels for better condensation. An ideal DC method should balance information compression and semantic preservation.
         </h2>
       </div>
@@ -264,7 +257,7 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Dataset condensation always faces a constitutive trade-off: balancing performance and fidelity under extreme compression. Existing methods struggle with two bottlenecks: image-level selection methods (Coreset Selection, Dataset Quantization) suffer from inefficiency condensation, while pixel-level optimization (Dataset Distillation) introduces semantic distortion due to over-parameterization. With empirical observations, we find that a critical problem in dataset condensation is the oversight of color's dual role as an information carrier and a basic semantic representation unit. We argue that improving the colorfulness of condensed images is beneficial for representation learning. Motivated by this, we propose <strong>DC3</strong>: a <strong></strong>D</strong>ataset <strong>C</strong>ondensation framework with <strong>C</strong>olor <strong>C</strong>ompensation. After a calibrated selection strategy, DC3 utilizes the latent diffusion model to enhance the color diversity of an image rather than creating a brand-new one. Extensive experiments demonstrate the superior performance and generalization of DC3 that outperforms SOTA methods across multiple benchmarks. To the best of our knowledge, besides focusing on downstream tasks, DC3 is the first research to fine-tune pre-trained diffusion models with condensed datasets. The FID results prove that training networks with our high-quality datasets is feasible without model collapse or other degradation issues. Code and generated data will be released soon.
+            Dataset condensation always faces a constitutive trade-off: balancing performance and fidelity under extreme compression. Existing methods struggle with two bottlenecks: image-level selection methods (Coreset Selection, Dataset Quantization) suffer from inefficiency condensation, while pixel-level optimization (Dataset Distillation) introduces semantic distortion due to over-parameterization. With empirical observations, we find that a critical problem in dataset condensation is the oversight of color's dual role as an information carrier and a basic semantic representation unit. We argue that improving the colorfulness of condensed images is beneficial for representation learning. Motivated by this, we propose <strong>DC3</strong>: a <strong>D</strong>ataset <strong>C</strong>ondensation framework with <strong>C</strong>olor <strong>C</strong>ompensation. After a calibrated selection strategy, DC3 utilizes the latent diffusion model to enhance the color diversity of an image rather than creating a brand-new one. Extensive experiments demonstrate the superior performance and generalization of DC3 that outperforms SOTA methods across multiple benchmarks. To the best of our knowledge, besides focusing on downstream tasks, DC3 is the first research to fine-tune pre-trained diffusion models with condensed datasets. The FID results prove that training networks with our high-quality datasets is feasible without model collapse or other degradation issues. Code and generated data will be released soon.
           </p>
         </div>
       </div>
@@ -272,7 +265,7 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -280,7 +273,7 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -292,7 +285,7 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
     <!-- Method. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3 has-text-centered">Method</h2>
 
         <!-- Color Compensation for Dataset Condensation. -->
         <h3 class="title is-4">Color Compensation for Dataset Condensation</h3>
@@ -302,7 +295,7 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/images/comparison-image.png" 
+          <img src="./static/images/DC3-Fig4V8_01.png" 
                alt="Comparison between conventional and diffusion-based image processes"
                style="max-width: 100%; height: auto; margin: 20px 0;" />
           <p class="has-text-centered" style="margin-top: 15px;">
@@ -313,15 +306,15 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
         <!--/ Color Compensation for Dataset Condensation. -->
 
         <!-- Submodular Sampling. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-4">Submodular Sampling</h3>
         <div class="content has-text-justified">
           <p>
-                         <strong><em>Color compensation</em></strong> enhances the diversity of the images, but we need to know which images require compensation, as compensating the entire dataset is computational. 
-             Thus, we introduce submodular sampling as a feasible solution.
+            <strong><em>Color compensation</em></strong> enhances the diversity of the images, but we need to know which images require compensation, as compensating the entire dataset is computational. 
+            Thus, we introduce submodular sampling as a feasible solution.
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/images/tsne-visualization.png" 
+          <img src="./static/images/DC3-Fig10V4-tsne_01.png" 
                alt="T-SNE visualizations of intra-class clusters on ImageNet"
                style="max-width: 100%; height: auto; margin: 20px 0;" />
           <p class="has-text-centered" style="margin-top: 15px;">
@@ -364,68 +357,68 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
     <!--/ Concurrent Work. -->
 
     <!-- Results Tables -->
-    <div class="columns is-centered">
+    <div class="columns is-centered" style="margin-top: 3rem;">
       <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3 has-text-centered">Results</h2>
         
         <!-- ImageNet-1K Table -->
-        <h3 class="title is-4">ImageNet-1K Results</h3>
+        <h3 class="title is-4 has-text-centered">ImageNet-1K Results</h3>
         <div class="content has-text-centered">
-          <div class="table-container" style="overflow-x: auto;">
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <div class="table-container" style="overflow-x: auto; max-width: 50%; margin: 0 auto;">
+            <table class="table is-bordered is-striped is-narrow is-hoverable" style="font-size: 0.9em;">
               <thead>
                 <tr>
-                  <th style="background-color: #f5f5f5;">Dataset</th>
-                  <th style="background-color: #f5f5f5;">IPC</th>
+                  <th style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">Dataset</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">IPC</th>
                   <th colspan="3" style="background-color: #f5f5f5; text-align: center;">Matching-based</th>
                   <th colspan="4" style="background-color: #f5f5f5; text-align: center;">Generation-based</th>
-                  <th style="background-color: #f5f5f5;">Full</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">Full</th>
                 </tr>
                 <tr>
                   <th style="background-color: #f5f5f5;"></th>
-                  <th style="background-color: #f5f5f5;"></th>
-                  <th style="background-color: #f5f5f5;">TESLA<sup>†</sup></th>
-                  <th style="background-color: #f5f5f5;">SRe²L</th>
-                  <th style="background-color: #f5f5f5;">RDED<sup>†</sup></th>
-                  <th style="background-color: #f5f5f5;">Minimax</th>
-                  <th style="background-color: #f5f5f5;">D⁴M</th>
-                  <th style="background-color: #f5f5f5;">IGD</th>
-                  <th style="background-color: #f5f5f5;">DC3</th>
-                  <th style="background-color: #f5f5f5;"></th>
+                  <th style="background-color: #f5f5f5; text-align: center;">IPC</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">TESLA<sup>†</sup></th>
+                  <th style="background-color: #f5f5f5; text-align: center;">SRe²L</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">RDED<sup>†</sup></th>
+                  <th style="background-color: #f5f5f5; text-align: center;">Minimax</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">D⁴M</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">IGD</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">DC3</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">Full</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td rowspan="3" style="background-color: #f5f5f5;">ImageNet-1K</td>
-                  <td>1</td>
-                  <td style="text-decoration: underline;">7.7±0.2</td>
-                  <td>0.1±0.1</td>
-                  <td>6.6±0.2</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td style="font-weight: bold;">8.1±0.3</td>
-                  <td rowspan="3" style="background-color: #f5f5f5;">69.8</td>
+                  <td rowspan="3" style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">ImageNet-1K</td>
+                  <td style="text-align: center;">1</td>
+                  <td style="text-align: center; text-decoration: underline;">7.7±0.2</td>
+                  <td style="text-align: center;">0.1±0.1</td>
+                  <td style="text-align: center;">6.6±0.2</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center; font-weight: bold;">8.1±0.3</td>
+                  <td rowspan="3" style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">69.8</td>
                 </tr>
                 <tr>
-                  <td>10</td>
-                  <td>17.8±1.3</td>
-                  <td>21.3±0.6</td>
-                  <td>42.0±0.1</td>
-                  <td>44.3±0.5</td>
-                  <td>27.9±0.9</td>
-                  <td style="text-decoration: underline;">46.2±0.6</td>
-                  <td style="font-weight: bold;">50.4±0.2</td>
+                  <td style="text-align: center;">10</td>
+                  <td style="text-align: center;">17.8±1.3</td>
+                  <td style="text-align: center;">21.3±0.6</td>
+                  <td style="text-align: center;">42.0±0.1</td>
+                  <td style="text-align: center;">44.3±0.5</td>
+                  <td style="text-align: center;">27.9±0.9</td>
+                  <td style="text-align: center; text-decoration: underline;">46.2±0.6</td>
+                  <td style="text-align: center; font-weight: bold;">50.4±0.2</td>
                 </tr>
                 <tr>
-                  <td>50</td>
-                  <td>27.9±1.2</td>
-                  <td>46.8±0.2</td>
-                  <td>56.5±0.1</td>
-                  <td>58.6±0.3</td>
-                  <td>55.2±0.4</td>
-                  <td style="text-decoration: underline;">60.3±0.4</td>
-                  <td style="font-weight: bold;">62.3±0.7</td>
+                  <td style="text-align: center;">50</td>
+                  <td style="text-align: center;">27.9±1.2</td>
+                  <td style="text-align: center;">46.8±0.2</td>
+                  <td style="text-align: center;">56.5±0.1</td>
+                  <td style="text-align: center;">58.6±0.3</td>
+                  <td style="text-align: center;">55.2±0.4</td>
+                  <td style="text-align: center; text-decoration: underline;">60.3±0.4</td>
+                  <td style="text-align: center; font-weight: bold;">62.3±0.7</td>
                 </tr>
               </tbody>
             </table>
@@ -436,71 +429,71 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
         </div>
 
         <!-- CIFAR-10/100 Table -->
-        <h3 class="title is-4">CIFAR-10 and CIFAR-100 Results</h3>
+        <h3 class="title is-4 has-text-centered">CIFAR-10 and CIFAR-100 Results</h3>
         <div class="content has-text-centered">
-          <div class="table-container" style="overflow-x: auto;">
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <div class="table-container" style="overflow-x: auto; max-width: 50%; margin: 0 auto;">
+            <table class="table is-bordered is-striped is-narrow is-hoverable" style="font-size: 0.9em;">
               <thead>
                 <tr>
-                  <th style="background-color: #f5f5f5;">Dataset</th>
-                  <th style="background-color: #f5f5f5;">IPC</th>
-                  <th style="background-color: #f5f5f5;">RDED</th>
-                  <th style="background-color: #f5f5f5;">SRe²L</th>
-                  <th style="background-color: #f5f5f5;">DataDAM</th>
-                  <th style="background-color: #f5f5f5;">D⁴M</th>
-                  <th style="background-color: #f5f5f5;">DC3</th>
+                  <th style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">Dataset</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">IPC</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">RDED</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">SRe²L</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">DataDAM</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">D⁴M</th>
+                  <th style="background-color: #f5f5f5; text-align: center;">DC3</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td rowspan="3" style="background-color: #f5f5f5;">CIFAR-10</td>
-                  <td>1</td>
-                  <td>22.9±0.4</td>
-                  <td>16.9±0.9</td>
-                  <td style="font-weight: bold;">32.0±1.2</td>
-                  <td>17.6±1.1</td>
-                  <td style="text-decoration: underline;">25.6±1.2</td>
+                  <td rowspan="3" style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">CIFAR-10</td>
+                  <td style="text-align: center;">1</td>
+                  <td style="text-align: center;">22.9±0.4</td>
+                  <td style="text-align: center;">16.9±0.9</td>
+                  <td style="text-align: center; font-weight: bold;">32.0±1.2</td>
+                  <td style="text-align: center;">17.6±1.1</td>
+                  <td style="text-align: center; text-decoration: underline;">25.6±1.2</td>
                 </tr>
                 <tr>
-                  <td>10</td>
-                  <td>37.1±0.3</td>
-                  <td>27.2±0.5</td>
-                  <td style="text-decoration: underline;">54.2±0.8</td>
-                  <td>51.5±0.5</td>
-                  <td style="font-weight: bold;">57.8±0.8</td>
+                  <td style="text-align: center;">10</td>
+                  <td style="text-align: center;">37.1±0.3</td>
+                  <td style="text-align: center;">27.2±0.5</td>
+                  <td style="text-align: center; text-decoration: underline;">54.2±0.8</td>
+                  <td style="text-align: center;">51.5±0.5</td>
+                  <td style="text-align: center; font-weight: bold;">57.8±0.8</td>
                 </tr>
                 <tr>
-                  <td>50</td>
-                  <td>62.1±0.1</td>
-                  <td>47.5±0.6</td>
-                  <td style="text-decoration: underline;">67.0±0.4</td>
-                  <td>62.3±0.2</td>
-                  <td style="font-weight: bold;">80.9±0.5</td>
+                  <td style="text-align: center;">50</td>
+                  <td style="text-align: center;">62.1±0.1</td>
+                  <td style="text-align: center;">47.5±0.6</td>
+                  <td style="text-align: center; text-decoration: underline;">67.0±0.4</td>
+                  <td style="text-align: center;">62.3±0.2</td>
+                  <td style="text-align: center; font-weight: bold;">80.9±0.5</td>
                 </tr>
                 <tr>
-                  <td rowspan="3" style="background-color: #f5f5f5;">CIFAR-100</td>
-                  <td>1</td>
-                  <td>11.0±0.3</td>
-                  <td>2.0±0.2</td>
-                  <td style="text-decoration: underline;">14.5±0.5</td>
-                  <td>5.7±1.4</td>
-                  <td style="font-weight: bold;">21.1±1.6</td>
+                  <td rowspan="3" style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">CIFAR-100</td>
+                  <td style="text-align: center;">1</td>
+                  <td style="text-align: center;">11.0±0.3</td>
+                  <td style="text-align: center;">2.0±0.2</td>
+                  <td style="text-align: center; text-decoration: underline;">14.5±0.5</td>
+                  <td style="text-align: center;">5.7±1.4</td>
+                  <td style="text-align: center; font-weight: bold;">21.1±1.6</td>
                 </tr>
                 <tr>
-                  <td>10</td>
-                  <td>42.6±0.2</td>
-                  <td>23.5±0.8</td>
-                  <td>34.8±0.5</td>
-                  <td style="text-decoration: underline;">44.0±0.3</td>
-                  <td style="font-weight: bold;">57.4±0.2</td>
+                  <td style="text-align: center;">10</td>
+                  <td style="text-align: center;">42.6±0.2</td>
+                  <td style="text-align: center;">23.5±0.8</td>
+                  <td style="text-align: center;">34.8±0.5</td>
+                  <td style="text-align: center; text-decoration: underline;">44.0±0.3</td>
+                  <td style="text-align: center; font-weight: bold;">57.4±0.2</td>
                 </tr>
                 <tr>
-                  <td>50</td>
-                  <td style="text-decoration: underline;">62.6±0.1</td>
-                  <td>51.4±0.8</td>
-                  <td>49.4±0.3</td>
-                  <td>48.4±0.9</td>
-                  <td style="font-weight: bold;">64.2±0.5</td>
+                  <td style="text-align: center;">50</td>
+                  <td style="text-align: center; text-decoration: underline;">62.6±0.1</td>
+                  <td style="text-align: center;">51.4±0.8</td>
+                  <td style="text-align: center;">49.4±0.3</td>
+                  <td style="text-align: center;">48.4±0.9</td>
+                  <td style="text-align: center; font-weight: bold;">64.2±0.5</td>
                 </tr>
               </tbody>
             </table>
@@ -537,7 +530,7 @@ Of course. To replace the video with an image, you'll need to swap the <video> e
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link external-link" href="https://github.com/528why" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
