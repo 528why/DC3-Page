@@ -181,14 +181,16 @@
 
 
   <!-- Abstract. -->
-  <section class="hero teaser">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Dataset condensation always faces a constitutive trade-off: balancing performance and fidelity under extreme compression. Existing methods struggle with two bottlenecks: image-level selection methods (Coreset Selection, Dataset Quantization) suffer from inefficiency condensation, while pixel-level optimization (Dataset Distillation) introduces semantic distortion due to over-parameterization. With empirical observations, we find that a critical problem in dataset condensation is the oversight of color's dual role as an information carrier and a basic semantic representation unit. We argue that improving the colorfulness of condensed images is beneficial for representation learning. Motivated by this, we propose <strong>DC3</strong>: a <strong>D</strong>ataset <strong>C</strong>ondensation framework with <strong>C</strong>olor <strong>C</strong>ompensation. After a calibrated selection strategy, DC3 utilizes the latent diffusion model to enhance the color diversity of an image rather than creating a brand-new one. Extensive experiments demonstrate the superior performance and generalization of DC3 that outperforms SOTA methods across multiple benchmarks. To the best of our knowledge, besides focusing on downstream tasks, DC3 is the first research to fine-tune pre-trained diffusion models with condensed datasets. The FID results prove that training networks with our high-quality datasets is feasible without model collapse or other degradation issues. Code and generated data will be released soon.
-          </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Dataset condensation always faces a constitutive trade-off: balancing performance and fidelity under extreme compression. Existing methods struggle with two bottlenecks: image-level selection methods (Coreset Selection, Dataset Quantization) suffer from inefficiency condensation, while pixel-level optimization (Dataset Distillation) introduces semantic distortion due to over-parameterization. With empirical observations, we find that a critical problem in dataset condensation is the oversight of color's dual role as an information carrier and a basic semantic representation unit. We argue that improving the colorfulness of condensed images is beneficial for representation learning. Motivated by this, we propose <strong>DC3</strong>: a <strong>D</strong>ataset <strong>C</strong>ondensation framework with <strong>C</strong>olor <strong>C</strong>ompensation. After a calibrated selection strategy, DC3 utilizes the latent diffusion model to enhance the color diversity of an image rather than creating a brand-new one. Extensive experiments demonstrate the superior performance and generalization of DC3 that outperforms SOTA methods across multiple benchmarks. To the best of our knowledge, besides focusing on downstream tasks, DC3 is the first research to fine-tune pre-trained diffusion models with condensed datasets. The FID results prove that training networks with our high-quality datasets is feasible without model collapse or other degradation issues. Code and generated data will be released soon.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -200,68 +202,14 @@
       <div class="hero-body">
         <img src="./static/images/DC3-Fig1V1_01.png" alt="Teaser image description" style="max-width: 40%; height: auto; margin: 0 auto; display: block; margin-bottom: 2rem;" />
         
-        <h2 class="subtitle has-text-centered" style="margin-top: 2rem;">
+        <p class="has-text-centered" style="margin-top: 2rem; font-style: italic;">
           <strong>Dataset Condensation Triangle.</strong> Coreset Selection and Dataset Quantization focus on image-level selection, while Dataset Distillation optimizes pixels for better condensation. An ideal DC method should balance information compression and semantic preservation.
-        </h2>
+        </p>
       </div>
     </div>
   </section>
 
-    <!-- <section class="section">
-    <div class="container is-max-desktop">
-  
-      <style>
-        .figure-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
-          gap: 20px; /* Adjusts the space between images */
-          text-align: center;
-        }
-        .figure-grid img {
-          width: 100%;
-          height: auto;
-          border: 1px solid #ddd; /* Optional: adds a light border */
-          border-radius: 4px;
-        }
-        .figure-grid figcaption {
-          margin-top: 8px;
-          font-size: 0.9em;
-          color: #555;
-        }
-        .main-caption {
-          margin-top: 20px;
-          font-size: 1.1em;
-          text-align: center;
-        }
-      </style>
-  
-      <figure>
-        <div class="figure-grid">
-          <figure>
-            <img src="./static/images/DM-Fig2V2-CIFAR_01.png" alt="KDE curve for DM method">
-            <figcaption>DM</figcaption>
-          </figure>
-          <figure>
-            <img src="./static/images/DSA-Fig2V2-CIFAR_01.png" alt="KDE curve for DSA method">
-            <figcaption>DSA</figcaption>
-          </figure>
-          <figure>
-            <img src="./static/images/DataDAM-Fig2V2-CIFAR_01.png" alt="KDE curve for DataDAM method">
-            <figcaption>DataDAM</figcaption>
-          </figure>
-          <figure>
-            <img src="./static/images/DC3-Fig2V2-CIFAR_01.png" alt="KDE curve for DC3 (Ours) method">
-            <figcaption>DC3 (Ours)</figcaption>
-          </figure>
-        </div>
-        
-        <figcaption class="main-caption">
-          <strong>The KDE curves of the normalized RGB pixel value across different DC methods.</strong> Previous methods exhibit a <strong><em>Color Homogenization</em></strong> phenomenon in contrast to DC3.
-        </figcaption>
-      </figure>
-  
-    </div>
-  </section> -->
+
 
 
 <section class="section">
@@ -302,15 +250,69 @@
           <img src="./static/images/DC3-Fig4V8_01.png" 
                alt="Comparison between conventional and diffusion-based image processes"
                style="max-width: 100%; height: auto; margin: 20px 0;" />
-          <p class="has-text-centered" style="margin-top: 15px;">
+          <p class="has-text-centered" style="margin-top: 15px; margin-bottom: 3rem; font-style: italic;">
             <strong>Comparison between conventional and diffusion-based image processes.</strong>
             The diffusion-based approach achieves semantic-aware color reasoning, mitigating distortions caused by mathematical transformations in traditional pipelines.
           </p>
         </div>
+
+        <div class="container is-max-desktop">
+  
+          <style>
+            .figure-grid {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+              gap: 20px; /* Adjusts the space between images */
+              text-align: center;
+            }
+            .figure-grid img {
+              width: 100%;
+              height: auto;
+              border: 1px solid #ddd; /* Optional: adds a light border */
+              border-radius: 4px;
+            }
+            .figure-grid figcaption {
+              margin-top: 8px;
+              font-size: 0.9em;
+              color: #555;
+            }
+            .main-caption {
+              margin-top: 20px;
+              font-size: 1em;
+              text-align: center;
+            }
+          </style>
+      
+          <figure>
+            <div class="figure-grid">
+              <figure>
+                <img src="./static/images/DM-Fig2V2-CIFAR_01.png" alt="KDE curve for DM method">
+                <figcaption>DM</figcaption>
+              </figure>
+              <figure>
+                <img src="./static/images/DSA-Fig2V2-CIFAR_01.png" alt="KDE curve for DSA method">
+                <figcaption>DSA</figcaption>
+              </figure>
+              <figure>
+                <img src="./static/images/DataDAM-Fig2V2-CIFAR_01.png" alt="KDE curve for DataDAM method">
+                <figcaption>DataDAM</figcaption>
+              </figure>
+              <figure>
+                <img src="./static/images/DC3-Fig2V2-CIFAR_01.png" alt="KDE curve for DC3 (Ours) method">
+                <figcaption>DC3 (Ours)</figcaption>
+              </figure>
+            </div>
+            
+            <figcaption class="main-caption" style="font-style: italic;">
+              <strong>The KDE curves of the normalized RGB pixel value across different DC methods.</strong> Previous methods exhibit a <strong><em>Color Homogenization</em></strong> phenomenon in contrast to DC3.
+            </figcaption>
+          </figure>
+      
+        </div>
         <!--/ Color Compensation for Dataset Condensation. -->
 
         <!-- Submodular Sampling. -->
-        <h3 class="title is-4">Submodular Sampling</h3>
+        <h3 class="title is-4" style="margin-top: 4rem;">Submodular Sampling</h3>
         <div class="content has-text-justified">
           <p>
             <strong><em>Color compensation</em></strong> enhances the diversity of the images, but we need to know which images require compensation, as compensating the entire dataset is computational. 
@@ -321,7 +323,7 @@
           <img src="./static/images/DC3-Fig10V4-tsne_01.png" 
                alt="T-SNE visualizations of intra-class clusters on ImageNet"
                style="max-width: 100%; height: auto; margin: 20px 0;" />
-          <p class="has-text-centered" style="margin-top: 15px;">
+          <p class="has-text-centered" style="margin-top: 15px; font-style: italic;">
             <strong>T-SNE visualizations of intra-class clusters on ImageNet.</strong>
             Submodular sampling selects the representative samples to preserve maximum semantic integrity and feature diversity.
           </p>
@@ -368,19 +370,17 @@
         <!-- ImageNet-1K Results -->
         <h3 class="title is-4">ImageNet-1K Results</h3>
         <div class="content has-text-justified">
-          <div class="table-container" style="overflow-x: auto; max-width: 50%; margin: 0 auto;">
+          <div class="table-container" style="overflow-x: auto; max-width: 80%; margin: 0 auto;">
             <table class="table is-bordered is-striped is-narrow is-hoverable" style="font-size: 0.9em;">
               <thead>
                 <tr>
-                  <th style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">Dataset</th>
-                  <th style="background-color: #f5f5f5; text-align: center;">IPC</th>
+                  <th rowspan="2" style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">Dataset</th>
+                  <th rowspan="2" style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">IPC</th>
                   <th colspan="3" style="background-color: #f5f5f5; text-align: center;">Matching-based</th>
                   <th colspan="4" style="background-color: #f5f5f5; text-align: center;">Generation-based</th>
-                  <th style="background-color: #f5f5f5; text-align: center;">Full</th>
+                  <th rowspan="2" style="background-color: #f5f5f5; text-align: center; vertical-align: middle;">Full</th>
                 </tr>
                 <tr>
-                  <th style="background-color: #f5f5f5;"></th>
-                  <th style="background-color: #f5f5f5; text-align: center;">IPC</th>
                   <th style="background-color: #f5f5f5; text-align: center;">TESLA<sup>†</sup></th>
                   <th style="background-color: #f5f5f5; text-align: center;">SRe²L</th>
                   <th style="background-color: #f5f5f5; text-align: center;">RDED<sup>†</sup></th>
@@ -388,7 +388,6 @@
                   <th style="background-color: #f5f5f5; text-align: center;">D⁴M</th>
                   <th style="background-color: #f5f5f5; text-align: center;">IGD</th>
                   <th style="background-color: #f5f5f5; text-align: center;">DC3</th>
-                  <th style="background-color: #f5f5f5; text-align: center;">Full</th>
                 </tr>
               </thead>
               <tbody>
@@ -427,7 +426,7 @@
               </tbody>
             </table>
           </div>
-          <p class="has-text-centered" style="margin-top: 15px;">
+          <p class="has-text-centered" style="margin-top: 15px; font-style: italic;">
             <strong>Top-1 Accuracy↑ on ImageNet-1K.</strong> The results of DC3 and other state-of-the-art methods are evaluated on ResNet-18. †: The results of TESLA are evaluated on ConvNet.
           </p>
         </div>
@@ -435,7 +434,7 @@
         <!-- CIFAR-10/100 Results -->
        <h3 class="title is-4">CIFAR-10 and CIFAR-100 Results</h3>
         <div class="content has-text-justified">
-          <div class="table-container" style="overflow-x: auto; max-width: 50%; margin: 0 auto;">
+          <div class="table-container" style="overflow-x: auto; max-width: 80%; margin: 0 auto;">
             <table class="table is-bordered is-striped is-narrow is-hoverable" style="font-size: 0.9em;">
               <thead>
                 <tr>
@@ -502,7 +501,7 @@
               </tbody>
             </table>
           </div>
-          <p class="has-text-centered" style="margin-top: 15px;">
+          <p class="has-text-centered" style="margin-top: 15px; font-style: italic;">
             <strong>Top-1 Accuracy↑ on CIFAR-10 and CIFAR-100.</strong> The results are evaluated by ResNet-18.
           </p>
         </div>
